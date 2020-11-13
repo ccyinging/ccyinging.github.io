@@ -208,30 +208,32 @@
 </li>
 </ul>
 <h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
-<li><p>语种</p>
-<ul>
+<li>语种<ul>
 <li>华语</li>
 <li>欧美</li>
 <li>日韩</li>
 </ul>
 </li>
-<li><p>心情</p>
-<ul>
+<li>心情<ul>
 <li>怀旧</li>
 <li>激昂</li>
 <li>安静</li>
 <li>伤感</li>
 </ul>
-<h4 id="音乐播放进度条"><a href="#音乐播放进度条" class="headerlink" title="音乐播放进度条"></a><code>音乐播放进度条</code></h4></li>
-</ul>
-<h2 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h2><h4 id="登录-注册"><a href="#登录-注册" class="headerlink" title="登录|注册"></a>登录|注册</h4><ul>
-<li>发送手机验证码:<ul>
-<li>POST: /send</li>
-<li>Parameters: userPhone:String(*)</li>
-<li>Responses: 200(成功) | 100(失败)</li>
-</ul>
 </li>
 </ul>
+<h4 id="音乐播放进度条"><a href="#音乐播放进度条" class="headerlink" title="音乐播放进度条"></a><code>音乐播放进度条</code></h4><h2 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h2><p><code>注：如无特殊情况：enctype:multipart/form-data</code></p>
+<h4 id="登录-注册"><a href="#登录-注册" class="headerlink" title="登录|注册"></a>登录|注册</h4><p>&emsp;<br><strong>POST:/send    发送手机验证码</strong><br><strong>Parameters:</strong></p>
+<ul>
+<li>userPhone:String*    用户手机号码</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li>code:状态</li>
+<li>message:状态消息</li>
+<li>data:返回数据    null<br>&emsp;</li>
+</ul>
+<p><strong>POST:/login    登录</strong></p>
 
         </div>
 
