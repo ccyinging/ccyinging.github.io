@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     <title>
-        缩小增量排序 | 陈小盈
+        冒泡排序 | 陈小盈
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -135,13 +135,13 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <h3><a class="title-hover-animation">缩小增量排序</a></h3>
+            <h3><a class="title-hover-animation">冒泡排序</a></h3>
         </div>
 
         <div class="meta-info">
             <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fa fa-calendar-o"></i> 2018-11-05 10:52:09
+        <i class="fa fa-calendar-o"></i> 2017-11-03 23:15:59
     </span>
     
         <span class="article-categories article-meta-item">
@@ -180,7 +180,8 @@
 
         <div class="article-content markdown-body">
             <p><code>算法是一种思想！</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] val)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//划组排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> g = val.length / <span class="number">2</span>; g &gt; <span class="number">0</span>; g /= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">//插入排序思想</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = g; i &lt; val.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> insert_val = val[i];</span><br><span class="line">            <span class="keyword">int</span> insert_index = i - g;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (insert_index &gt;= <span class="number">0</span> &amp;&amp; insert_val &lt; val[insert_index]) &#123;</span><br><span class="line">                val[insert_index + g] = val[insert_index];</span><br><span class="line">                insert_index -= g;</span><br><span class="line">            &#125;</span><br><span class="line">            val[insert_index + g] = insert_val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; val.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">//判断是否需要继续冒泡</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = val.length - <span class="number">1</span>; j &gt;= i + <span class="number">1</span>; j--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val[j] &lt; val[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = val[j];</span><br><span class="line">                val[j] = val[j - <span class="number">1</span>];</span><br><span class="line">                val[j - <span class="number">1</span>] = temp;</span><br><span class="line"></span><br><span class="line">                flag = <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="keyword">false</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
         </div>
 
         <div class="article-nav">
@@ -188,9 +189,9 @@
                 <div class="article-prev">
                     <a class="prev btn"
                        rel="prev"
-                       href="/2018/11/14/java%E5%8F%8D%E5%B0%84/"
+                       href="/2017/11/04/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"
                     >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">java反射</span><span class="post-nav-item">Prev posts</span>
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">快速排序</span><span class="post-nav-item">Prev posts</span>
                     </a>
                 </div>
             
@@ -198,9 +199,9 @@
                 <div class="article-next">
                     <a class="next btn"
                        rel="next"
-                       href="/2018/11/03/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"
+                       href="/2017/11/03/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/"
                     >
-                        <span class="post-nav-title-item">冒泡排序</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">简单选择排序</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
