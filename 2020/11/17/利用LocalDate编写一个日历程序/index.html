@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     <title>
-        music | 陈小盈
+        利用LocalDate编写一个日历程序 | 陈小盈
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -135,13 +135,13 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <h3><a class="title-hover-animation">music</a></h3>
+            <h3><a class="title-hover-animation">利用LocalDate编写一个日历程序</a></h3>
         </div>
 
         <div class="meta-info">
             <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fa fa-calendar-o"></i> 2020-11-12 20:50:00
+        <i class="fa fa-calendar-o"></i> 2020-11-17 09:57:32
     </span>
     
         <span class="article-categories article-meta-item">
@@ -161,7 +161,15 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">接口文档</a>
+                        <a href="/tags/java/">java</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/demo/">demo</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/date/">date</a>
                     </li>
                 
             </ul>
@@ -175,88 +183,20 @@
         </div>
 
         <div class="article-content markdown-body">
-            <h2 id="音乐分享社区"><a href="#音乐分享社区" class="headerlink" title="音乐分享社区"></a>音乐分享社区</h2><h3 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h3><h4 id="logo-我的音乐-主页-榜单-歌手-分类-搜索框-注册-登录"><a href="#logo-我的音乐-主页-榜单-歌手-分类-搜索框-注册-登录" class="headerlink" title="logo   我的音乐(主页)  榜单  歌手  分类  搜索框  注册|登录"></a><code>logo   我的音乐(主页)  榜单  歌手  分类  搜索框  注册|登录</code></h4><h4 id="音乐播放页面"><a href="#音乐播放页面" class="headerlink" title="音乐播放页面"></a><code>音乐播放页面</code></h4><h4 id="我的音乐"><a href="#我的音乐" class="headerlink" title="我的音乐"></a>我的音乐</h4><ul>
-<li>我收藏的歌手(我的歌手)</li>
-<li>我收藏的歌曲(我喜欢)</li>
-</ul>
-<h4 id="用户注册和登录"><a href="#用户注册和登录" class="headerlink" title="用户注册和登录"></a>用户注册和登录</h4><ul>
-<li>管理员(内置, 非注册)<ul>
-<li>管理用户信息</li>
-<li>管理歌曲</li>
-<li>对用户上传歌曲进行审核</li>
-</ul>
-</li>
-<li>普通用户</li>
-</ul>
-<h4 id="用户信息-登陆后-注册-登录-变成用户头像，点击头像"><a href="#用户信息-登陆后-注册-登录-变成用户头像，点击头像" class="headerlink" title="用户信息(登陆后 注册|登录 变成用户头像，点击头像)"></a>用户信息(登陆后 注册|登录 变成用户头像，点击头像)</h4><ul>
-<li>个人信息设置</li>
-<li>消息通知</li>
-<li>登录退出</li>
-</ul>
-<h4 id="榜单"><a href="#榜单" class="headerlink" title="榜单"></a>榜单</h4><ul>
-<li>热搜榜</li>
-<li>新歌榜</li>
-</ul>
-<h4 id="歌手"><a href="#歌手" class="headerlink" title="歌手"></a>歌手</h4><ul>
-<li>推荐歌手</li>
-<li>华语歌手</li>
-<li>欧美歌手</li>
-<li>日韩歌手<ul>
-<li>歌手信息</li>
-<li>歌手歌曲</li>
-</ul>
-</li>
-</ul>
-<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
-<li>语种<ul>
-<li>华语</li>
-<li>欧美</li>
-<li>日韩</li>
-</ul>
-</li>
-<li>心情<ul>
-<li>怀旧</li>
-<li>激昂</li>
-<li>安静</li>
-<li>伤感</li>
-</ul>
-</li>
-</ul>
-<h4 id="音乐播放进度条"><a href="#音乐播放进度条" class="headerlink" title="音乐播放进度条"></a><code>音乐播放进度条</code></h4><h3 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h3><p><code>注：如无特殊情况：enctype:multipart/form-data</code></p>
-<h4 id="登录-注册"><a href="#登录-注册" class="headerlink" title="登录|注册"></a>登录|注册</h4><hr>
-<p><strong>POST:/send    发送手机验证码</strong><br><strong>Parameters:</strong></p>
-<ul>
-<li>userPhone:String*    用户手机号码</li>
-</ul>
-<p><strong>Response:</strong></p>
-<ul>
-<li>code:状态</li>
-<li>message:状态消息</li>
-<li>data:返回数据    null</li>
-</ul>
-<hr>
-<p><strong>POST:/login    登录</strong></p>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ccying</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018/8/25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Calender</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.print(<span class="string">&quot;输入时间，格式为yyyy/MM/dd：&quot;</span>);</span><br><span class="line">        String date = <span class="keyword">new</span> Scanner(System.in).nextLine();</span><br><span class="line">        String[] dates = date.split(<span class="string">&quot;/&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> year = Integer.parseInt(dates[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">int</span> month = Integer.parseInt(dates[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">int</span> today = Integer.parseInt(dates[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">        LocalDate localDate = LocalDate.of(year, month, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> week = localDate.getDayOfWeek().getValue();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;Mon\tTue\tWed\tThu\tFir\tSta\tSun&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; week - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            System.out.print(<span class="string">&quot; \t&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (localDate.getMonthValue() == month) &#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%2d&quot;</span>,localDate.getDayOfMonth());</span><br><span class="line">            <span class="keyword">if</span> (localDate.getDayOfMonth() == today) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot;*\t&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; \t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (localDate.getDayOfWeek().getValue() == <span class="number">7</span>) &#123;</span><br><span class="line">                System.out.println();</span><br><span class="line">            &#125;</span><br><span class="line">            localDate = localDate.plusDays(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
         <div class="article-nav">
             
-                <div class="article-prev">
-                    <a class="prev btn"
-                       rel="prev"
-                       href="/2020/11/17/%E5%88%A9%E7%94%A8LocalDate%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E6%97%A5%E5%8E%86%E7%A8%8B%E5%BA%8F/"
-                    >
-                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">利用LocalDate编写一个日历程序</span><span class="post-nav-item">Prev posts</span>
-                    </a>
-                </div>
-            
             
                 <div class="article-next">
                     <a class="next btn"
                        rel="next"
-                       href="/2019/09/16/linux%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E8%A3%85/"
+                       href="/2020/11/12/README/"
                     >
-                        <span class="post-nav-title-item">Linux下常用软件工具环境的安装(CentOS Linux 7)</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
+                        <span class="post-nav-title-item">music</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
             
@@ -328,7 +268,7 @@
         
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB%E7%A4%BE%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">音乐分享社区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.1.</span> <span class="nav-text">系统设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#logo-%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90-%E4%B8%BB%E9%A1%B5-%E6%A6%9C%E5%8D%95-%E6%AD%8C%E6%89%8B-%E5%88%86%E7%B1%BB-%E6%90%9C%E7%B4%A2%E6%A1%86-%E6%B3%A8%E5%86%8C-%E7%99%BB%E5%BD%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">logo   我的音乐(主页)  榜单  歌手  分类  搜索框  注册|登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.1.2.</span> <span class="nav-text">音乐播放页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E9%9F%B3%E4%B9%90"><span class="nav-number">1.1.3.</span> <span class="nav-text">我的音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E5%92%8C%E7%99%BB%E5%BD%95"><span class="nav-number">1.1.4.</span> <span class="nav-text">用户注册和登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E7%99%BB%E9%99%86%E5%90%8E-%E6%B3%A8%E5%86%8C-%E7%99%BB%E5%BD%95-%E5%8F%98%E6%88%90%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F%EF%BC%8C%E7%82%B9%E5%87%BB%E5%A4%B4%E5%83%8F"><span class="nav-number">1.1.5.</span> <span class="nav-text">用户信息(登陆后 注册|登录 变成用户头像，点击头像)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%9C%E5%8D%95"><span class="nav-number">1.1.6.</span> <span class="nav-text">榜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%8C%E6%89%8B"><span class="nav-number">1.1.7.</span> <span class="nav-text">歌手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.8.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="nav-number">1.1.9.</span> <span class="nav-text">音乐播放进度条</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="nav-number">1.2.</span> <span class="nav-text">接口文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C"><span class="nav-number">1.2.1.</span> <span class="nav-text">登录|注册</span></a></li></ol></li></ol></li></ol>
+        
     </div>
 </div>
         

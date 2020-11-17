@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     <title>
-        tags | 陈小盈
+        二分查找 | 陈小盈
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -66,7 +66,7 @@
                 </li>
             
                 <li class="menu-item">
-                    <a class="active"
+                    <a class=""
                        href="/tags"
                     >
                         TAGS
@@ -107,7 +107,7 @@
                 </li>
             
                 <li class="drawer-menu-item">
-                    <a class="active"
+                    <a class=""
                        href="/tags">TAGS</a>
                 </li>
             
@@ -131,15 +131,90 @@
                 <main class="main-content normal-code-theme">
 
                     
-                        
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/algorithm/" style="font-size: 1.5em;">algorithm</a> <a href="/tags/annotation/" style="font-size: 0.98em;">annotation</a> <a href="/tags/date/" style="font-size: 0.98em;">date</a> <a href="/tags/demo/" style="font-size: 1.15em;">demo</a> <a href="/tags/exception/" style="font-size: 0.98em;">exception</a> <a href="/tags/file/" style="font-size: 0.98em;">file</a> <a href="/tags/hello-world/" style="font-size: 0.98em;">hello world</a> <a href="/tags/java/" style="font-size: 1.15em;">java</a> <a href="/tags/linux/" style="font-size: 0.98em;">linux</a> <a href="/tags/reflect/" style="font-size: 0.98em;">reflect</a> <a href="/tags/search/" style="font-size: 0.98em;">search</a> <a href="/tags/sort/" style="font-size: 1.33em;">sort</a> <a href="/tags/varargs/" style="font-size: 0.98em;">varargs</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" style="font-size: 0.98em;">接口文档</a>
-            </div>
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <h3><a class="title-hover-animation">二分查找</a></h3>
+        </div>
+
+        <div class="meta-info">
+            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa fa-calendar-o"></i> 2017-11-01 22:58:22
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/algorithm/">algorithm</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/search/">search</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+    
+    
+</div>
+
+        </div>
+
+        <div class="article-content markdown-body">
+            <p><code>算法是一种思想！</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> array 有序数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> key 要查找的关键字</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 关键字在数组的下标</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> high = array.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> mid = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">        mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (array[mid] == key) &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &lt; key) &#123;</span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <div class="article-nav">
+            
+                <div class="article-prev">
+                    <a class="prev btn"
+                       rel="prev"
+                       href="/2017/11/02/%E5%A0%86%E6%8E%92%E5%BA%8F/"
+                    >
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">堆排序</span><span class="post-nav-item">Prev posts</span>
+                    </a>
+                </div>
+            
+            
+                <div class="article-next">
+                    <a class="next btn"
+                       rel="next"
+                       href="/2017/09/21/A+B/"
+                    >
+                        <span class="post-nav-title-item">A+B</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            
+        </div>
+
+        <div class="comment-container">
+            <div class="comments-container">
+    
+</div>
         </div>
     </div>
-
+</div>
 
 
                     
@@ -197,6 +272,12 @@
     <!-- page aside -->
     <aside class="page-aside">
         
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+        
     </aside>
 
 </div>
@@ -244,6 +325,21 @@
 
 
 
+
+
+    
+        
+<script src="/js/code-copy.js"></script>
+
+    
+
+    
+        
+<script src="/lib/anime.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/post-toc.js"></script>
+
+    
 
 
 
