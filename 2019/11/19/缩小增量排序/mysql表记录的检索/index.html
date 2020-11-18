@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>
+        mysql表记录的检索--select语句 | 陈小盈
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <link rel="shortcut icon" href="/images/favicon.png">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <script id="hexo-configurations">
+    let CONFIG = {"hostname":"ccyinging.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"themeInfo":{"name":"ILS","version":"2.0.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"},"path":"search.json"};
+  </script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+<div class="page-container">
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+
+        <a class="logo-title" href="/">
+            陈小盈
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        HOME
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        ARCHIVES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/categories"
+                    >
+                        CATEGORIES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/tags"
+                    >
+                        TAGS
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/about"
+                    >
+                        ABOUT
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <h3><a class="title-hover-animation">mysql表记录的检索--select语句</a></h3>
+        </div>
+
+        <div class="meta-info">
+            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa fa-calendar-o"></i> 2019-11-19 16:58:09
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/mysql/">mysql</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+    
+    
+</div>
+
+        </div>
+
+        <div class="article-content markdown-body">
+            <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [d_test]&gt; select * from t_person;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        1 | 张        | 翼德     |</span><br><span class="line">|        2 | 刘        | 玄德     |</span><br><span class="line">|        3 | 关        | 云长     |</span><br><span class="line">|        4 | 孙        | 仲谋     |</span><br><span class="line">|        5 | 孙        | 伯符     |</span><br><span class="line">|        6 | 曹        | 孟德     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">6 rows in set (0.000 sec)</span><br><span class="line"></span><br><span class="line">MariaDB [d_test]&gt; select * from t_address;</span><br><span class="line">+-----------+--------+-----------+----------+</span><br><span class="line">| addressId | city   | state     | personId |</span><br><span class="line">+-----------+--------+-----------+----------+</span><br><span class="line">|         1 | 涿县   | 涿郡      |        2 |</span><br><span class="line">|         2 | 解县   | 河东郡    |        3 |</span><br><span class="line">|         3 | 富春   | 吴郡      |        4 |</span><br><span class="line">|         4 | 富春   | 吴郡      |        5 |</span><br><span class="line">+-----------+--------+-----------+----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="distinct"><a href="#distinct" class="headerlink" title="distinct"></a>distinct</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 过滤结果集重复记录</span></span></span><br><span class="line">MariaDB [d_test]&gt; select city,state from t_address;</span><br><span class="line">+--------+-----------+</span><br><span class="line">| city   | state     |</span><br><span class="line">+--------+-----------+</span><br><span class="line">| 涿县   | 涿郡      |</span><br><span class="line">| 解县   | 河东郡    |</span><br><span class="line">| 富春   | 吴郡      |</span><br><span class="line">| 富春   | 吴郡      |</span><br><span class="line">+--------+-----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br><span class="line"></span><br><span class="line">MariaDB [d_test]&gt; select distinct city,state from t_address;</span><br><span class="line">+--------+-----------+</span><br><span class="line">| city   | state     |</span><br><span class="line">+--------+-----------+</span><br><span class="line">| 涿县   | 涿郡      |</span><br><span class="line">| 解县   | 河东郡    |</span><br><span class="line">| 富春   | 吴郡      |</span><br><span class="line">+--------+-----------+</span><br><span class="line">3 rows in set (0.001 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 查询某几行记录：limit [start,] length; </span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># start表示从第几行开始检索，其中表中第一行记录为0，length表示检索多少行记录</span></span></span><br><span class="line">MariaDB [d_test]&gt; select firstName 姓, lastName 名 from t_person;</span><br><span class="line">+-----+--------+</span><br><span class="line">| 姓  | 名     |</span><br><span class="line">+-----+--------+</span><br><span class="line">| 张  | 翼德   |</span><br><span class="line">| 刘  | 玄德   |</span><br><span class="line">| 关  | 云长   |</span><br><span class="line">| 孙  | 仲谋   |</span><br><span class="line">| 孙  | 伯符   |</span><br><span class="line">| 曹  | 孟德   |</span><br><span class="line">+-----+--------+</span><br><span class="line">6 rows in set (0.000 sec)</span><br><span class="line"></span><br><span class="line">MariaDB [d_test]&gt; select firstName 姓, lastName 名 from t_person limit 3, 2;</span><br><span class="line">+-----+--------+</span><br><span class="line">| 姓  | 名     |</span><br><span class="line">+-----+--------+</span><br><span class="line">| 孙  | 仲谋   |</span><br><span class="line">| 孙  | 伯符   |</span><br><span class="line">+-----+--------+</span><br><span class="line">2 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="inner-join…on"><a href="#inner-join…on" class="headerlink" title="inner join…on"></a>inner join…on</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 内连接，结果集同时过滤t_person和t_address的记录信息，按条件连接</span></span></span><br><span class="line">MariaDB [d_test]&gt; select p.personId,firstName,lastName,city,state from t_person p join t_address a on p.personId=a.personId;</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">| personId | firstName | lastName | city   | state     |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">|        2 | 刘        | 玄德     | 涿县   | 涿郡      |</span><br><span class="line">|        3 | 关        | 云长     | 解县   | 河东郡    |</span><br><span class="line">|        4 | 孙        | 仲谋     | 富春   | 吴郡      |</span><br><span class="line">|        5 | 孙        | 伯符     | 富春   | 吴郡      |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="left-join…on"><a href="#left-join…on" class="headerlink" title="left join…on"></a>left join…on</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 左外连接，结果集包含左表t_person所有记录，然后按条件和右表t_address进行连接</span></span></span><br><span class="line">MariaDB [d_test]&gt; select p.personId,firstName,lastName,city,state from t_person p left join t_address a on p.personId=a.personId;</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">| personId | firstName | lastName | city   | state     |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">|        2 | 刘        | 玄德     | 涿县   | 涿郡      |</span><br><span class="line">|        3 | 关        | 云长     | 解县   | 河东郡    |</span><br><span class="line">|        4 | 孙        | 仲谋     | 富春   | 吴郡      |</span><br><span class="line">|        5 | 孙        | 伯符     | 富春   | 吴郡      |</span><br><span class="line">|        1 | 张        | 翼德     | NULL   | NULL      |</span><br><span class="line">|        6 | 曹        | 孟德     | NULL   | NULL      |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">6 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="right-join…on"><a href="#right-join…on" class="headerlink" title="right join…on"></a>right join…on</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 右外连接，结果集包含右表t_address所有记录，然后按条件和左表t_person进行连接</span></span></span><br><span class="line">MariaDB [d_test]&gt; select p.personId,firstName,lastName,city,state from t_person p right join t_address a on p.personId=a.personId;</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">| personId | firstName | lastName | city   | state     |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">|        2 | 刘        | 玄德     | 涿县   | 涿郡      |</span><br><span class="line">|        3 | 关        | 云长     | 解县   | 河东郡    |</span><br><span class="line">|        4 | 孙        | 仲谋     | 富春   | 吴郡      |</span><br><span class="line">|        5 | 孙        | 伯符     | 富春   | 吴郡      |</span><br><span class="line">+----------+-----------+----------+--------+-----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="where"><a href="#where" class="headerlink" title="where"></a>where</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 单一表达式过滤结果集</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where firstName=&#x27;孙&#x27;;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        4 | 孙        | 仲谋     |</span><br><span class="line">|        5 | 孙        | 伯符     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">2 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title="!"></a>!</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 逻辑非运算符表达式</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where firstName!=&#x27;孙&#x27;;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        1 | 张        | 翼德     |</span><br><span class="line">|        2 | 刘        | 玄德     |</span><br><span class="line">|        3 | 关        | 云长     |</span><br><span class="line">|        6 | 曹        | 孟德     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="or"><a href="#or" class="headerlink" title="or"></a>or</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 或逻辑运算符表达式</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where firstName=&#x27;孙&#x27; or firstName=&#x27;曹&#x27;;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        4 | 孙        | 仲谋     |</span><br><span class="line">|        5 | 孙        | 伯符     |</span><br><span class="line">|        6 | 曹        | 孟德     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">3 rows in set (0.001 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="and"><a href="#and" class="headerlink" title="and"></a>and</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 与逻辑运算表达式</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where firstName=&#x27;孙&#x27; and lastName=&#x27;仲谋&#x27;;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        4 | 孙        | 仲谋     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">1 row in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="between…and…"><a href="#between…and…" class="headerlink" title="between…and…"></a>between…and…</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 判断表达式值取值范围，和not between...and...相反</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where personId between 2 and 5;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        2 | 刘        | 玄德     |</span><br><span class="line">|        3 | 关        | 云长     |</span><br><span class="line">|        4 | 孙        | 仲谋     |</span><br><span class="line">|        5 | 孙        | 伯符     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">4 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="in"><a href="#in" class="headerlink" title="in"></a>in</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 判断表达式值是否在一个数学离散集合中</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where firstName in (&#x27;关&#x27;,&#x27;张&#x27;,&#x27;赵&#x27;,&#x27;黄&#x27;,&#x27;马&#x27;);</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        1 | 张        | 翼德     |</span><br><span class="line">|        3 | 关        | 云长     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">2 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="is-NULL"><a href="#is-NULL" class="headerlink" title="is NULL"></a>is NULL</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 判断表达式是否为NULL，和is not NULL相反</span></span></span><br><span class="line">MariaDB [d_test]&gt; select p.personId,firstName,lastName,city,state from t_person p left join t_address a on p.personId=a.personId where city is NULL;</span><br><span class="line">+----------+-----------+----------+------+-------+</span><br><span class="line">| personId | firstName | lastName | city | state |</span><br><span class="line">+----------+-----------+----------+------+-------+</span><br><span class="line">|        1 | 张        | 翼德     | NULL | NULL  |</span><br><span class="line">|        6 | 曹        | 孟德     | NULL | NULL  |</span><br><span class="line">+----------+-----------+----------+------+-------+</span><br><span class="line">2 rows in set (0.001 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="like"><a href="#like" class="headerlink" title="like"></a>like</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 模糊匹配表达式，和not like相反</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># %表示匹配零个或多个字符组成的任意字符串，_表示匹配任意一个字符</span></span></span><br><span class="line">MariaDB [d_test]&gt; select * from t_person where lastName like &#x27;云_&#x27;;</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">| personId | firstName | lastName |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">|        3 | 关        | 云长     |</span><br><span class="line">+----------+-----------+----------+</span><br><span class="line">1 row in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="order-by"><a href="#order-by" class="headerlink" title="order by"></a>order by</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 对结果集排序：order by...[asc|desc] [...[asc|desc]]</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># asc表示升序，desc表示降序</span></span></span><br><span class="line">MariaDB [d_test]&gt; select personId from t_person;</span><br><span class="line">+----------+</span><br><span class="line">| personId |</span><br><span class="line">+----------+</span><br><span class="line">|        1 |</span><br><span class="line">|        2 |</span><br><span class="line">|        3 |</span><br><span class="line">|        4 |</span><br><span class="line">|        5 |</span><br><span class="line">|        6 |</span><br><span class="line">+----------+</span><br><span class="line">6 rows in set (0.000 sec)</span><br><span class="line"></span><br><span class="line">MariaDB [d_test]&gt; select personId from t_person order by personId desc;</span><br><span class="line">+----------+</span><br><span class="line">| personId |</span><br><span class="line">+----------+</span><br><span class="line">|        6 |</span><br><span class="line">|        5 |</span><br><span class="line">|        4 |</span><br><span class="line">|        3 |</span><br><span class="line">|        2 |</span><br><span class="line">|        1 |</span><br><span class="line">+----------+</span><br><span class="line">6 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="group-by"><a href="#group-by" class="headerlink" title="group by"></a>group by</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 对结果集进行分组</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># count()，统计结果集中记录行数</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># group_concat()，将结果集字符串连接</span></span></span><br><span class="line">MariaDB [d_test]&gt; select a.city,count(a.city) people,group_concat(p.lastName) from t_person p right join t_address a on p.personId=a.personId group by city;</span><br><span class="line">+--------+--------+--------------------------+</span><br><span class="line">| city   | people | group_concat(p.lastName) |</span><br><span class="line">+--------+--------+--------------------------+</span><br><span class="line">| 富春   |      2 | 仲谋,伯符                |</span><br><span class="line">| 涿县   |      1 | 玄德                     |</span><br><span class="line">| 解县   |      1 | 云长                     |</span><br><span class="line">+--------+--------+--------------------------+</span><br><span class="line">3 rows in set (0.001 sec)</span><br></pre></td></tr></table></figure>
+
+<h4 id="having"><a href="#having" class="headerlink" title="having"></a>having</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 为group by分组设置过滤条件</span></span></span><br><span class="line">MariaDB [d_test]&gt; select city,count(city) people from t_address group by city having people &gt;= 2;</span><br><span class="line">+--------+--------+</span><br><span class="line">| city   | people |</span><br><span class="line">+--------+--------+</span><br><span class="line">| 富春   |      2 |</span><br><span class="line">+--------+--------+</span><br><span class="line">1 row in set (0.001 sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 将多个select语句查询的结果合并成一个新的结果集，要求每个select语句的字段个数必须相同：union [all]</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># union，会筛选掉结果集中重复的记录，合并后会对新的结果集进行排序，效率低</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># union all会直接合并结果集</span></span></span><br><span class="line">MariaDB [d_test]&gt; select personId,firstName,lastName from t_person union all select addressId,city,state from t_address;</span><br><span class="line">+----------+-----------+-----------+</span><br><span class="line">| personId | firstName | lastName  |</span><br><span class="line">+----------+-----------+-----------+</span><br><span class="line">|        1 | 张        | 翼德      |</span><br><span class="line">|        2 | 刘        | 玄德      |</span><br><span class="line">|        3 | 关        | 云长      |</span><br><span class="line">|        4 | 孙        | 仲谋      |</span><br><span class="line">|        5 | 孙        | 伯符      |</span><br><span class="line">|        6 | 曹        | 孟德      |</span><br><span class="line">|        1 | 涿县      | 涿郡      |</span><br><span class="line">|        2 | 解县      | 河东郡    |</span><br><span class="line">|        3 | 富春      | 吴郡      |</span><br><span class="line">|        4 | 富春      | 吴郡      |</span><br><span class="line">+----------+-----------+-----------+</span><br><span class="line">10 rows in set (0.000 sec)</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <div class="article-nav">
+            
+                <div class="article-prev">
+                    <a class="prev btn"
+                       rel="prev"
+                       href="/2020/11/12/README/"
+                    >
+                        <i class="fa fa-chevron-left"></i> <span class="post-nav-title-item">music</span><span class="post-nav-item">Prev posts</span>
+                    </a>
+                </div>
+            
+            
+                <div class="article-next">
+                    <a class="next btn"
+                       rel="next"
+                       href="/2019/11/17/%E7%BC%A9%E5%B0%8F%E5%A2%9E%E9%87%8F%E6%8E%92%E5%BA%8F/mysql%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"
+                    >
+                        <span class="post-nav-title-item">mysql安全管理(MariaDB 10.4.17 for Linux)</span><span class="post-nav-item">Next posts</span> <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            
+        </div>
+
+        <div class="comment-container">
+            <div class="comments-container">
+    
+</div>
+        </div>
+    </div>
+</div>
+
+
+                    
+
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy; 2020 <i class="fa fa-heart-o"></i> <a href="/">ccying</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
+                    href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v2.0.2</a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+            <li class="search popup-trigger">
+                <i class="fa fa-search"></i>
+            </li>
+            
+<script src="/js/local-search.js"></script>
+
+        
+        <li class="mode-toggle">
+            <i class="fa fa-moon-o"></i>
+        </li>
+        
+        <li class="page-aside-toggle">
+            <i class="fa fa-bars"></i>
+        </li>
+        
+            <li class="scroll-to-top">
+                <i class="fa fa-caret-up"></i>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#distinct"><span class="nav-number">1.</span> <span class="nav-text">distinct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#limit"><span class="nav-number">2.</span> <span class="nav-text">limit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inner-join%E2%80%A6on"><span class="nav-number">3.</span> <span class="nav-text">inner join…on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#left-join%E2%80%A6on"><span class="nav-number">4.</span> <span class="nav-text">left join…on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#right-join%E2%80%A6on"><span class="nav-number">5.</span> <span class="nav-text">right join…on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#where"><span class="nav-number">6.</span> <span class="nav-text">where</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">6.1.</span> <span class="nav-text">!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#or"><span class="nav-number">6.2.</span> <span class="nav-text">or</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#and"><span class="nav-number">6.3.</span> <span class="nav-text">and</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#between%E2%80%A6and%E2%80%A6"><span class="nav-number">6.4.</span> <span class="nav-text">between…and…</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#in"><span class="nav-number">6.5.</span> <span class="nav-text">in</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#is-NULL"><span class="nav-number">6.6.</span> <span class="nav-text">is NULL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#like"><span class="nav-number">6.7.</span> <span class="nav-text">like</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-by"><span class="nav-number">7.</span> <span class="nav-text">order by</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#group-by"><span class="nav-number">8.</span> <span class="nav-text">group by</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#having"><span class="nav-number">8.1.</span> <span class="nav-text">having</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#union"><span class="nav-number">9.</span> <span class="nav-text">union</span></a></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+</div>
+
+
+
+    <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-icon">
+            <i class="fa fa-search"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/main.js"></script>
+<script src="/js/header-shrink.js"></script>
+<script src="/js/toggle-mode.js"></script>
+
+
+
+    
+<script src="/js/scroll-to-top.js"></script>
+
+
+
+
+
+    
+        
+<script src="/js/code-copy.js"></script>
+
+    
+
+    
+        
+<script src="/lib/anime.min.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/post-toc.js"></script>
+
+    
+
+
+
+</body>
+</html>
