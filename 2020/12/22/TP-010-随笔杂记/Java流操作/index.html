@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java流操作 | 
+	 
+	陈小盈|笔记本
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.baidu.com/s?wd=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">陈小盈|笔记本</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="https://github.com/ccyinging" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<!-- <button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button> -->
+	<div id="site-toc">
+		<!-- <input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索"> -->
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										I-001-阅读摘抄
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/22/I-001-%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/%E5%A4%A9%E5%B9%95%E7%BA%A2%E5%B0%98/">
+                     
+										    天幕红尘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TP-001-数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Problems
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										HDU OJ
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/07/22/TP-001-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Problems/HDU%20OJ/HDU%201000/">
+                     
+										    HDU 1000
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TP-003-计算机操作系统
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Windows操作
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/10/16/TP-003-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows%E6%93%8D%E4%BD%9C/%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/">
+                     
+										    修改用户目录文件夹名
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TP-008-vue前端开发
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/11/12/TP-008-vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/001.Vue%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+                     
+										    001.Vue开发环境搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TP-009-常用开发软件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/11/02/TP-009-%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/My%20Plugs/">
+                     
+										    My Plugs
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TP-010-随笔杂记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/09/TP-010-%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/Java%20Path%E5%92%8CFiles%E8%AF%BB%E5%86%99%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6/">
+                     
+										    Java Path和Files读写文本文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/12/22/TP-010-%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/Java%E6%B5%81%E6%93%8D%E4%BD%9C/">
+                     
+										    Java流操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/11/14/TP-010-%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F/">
+                     
+										    类加载顺序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	Java流操作
+</h1>
+<div class="article-meta">
+	
+	<span>ccying</span>
+	<span>2020-12-22</span>
+	<!-- <span>2020-12-22 21:00:21</span> -->
+		<!-- <div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/JAVA/">JAVA</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div> -->
+
+</div>
+
+<div id="article-content">
+	<p>Java SE 8 stream 提供了一种在集合级别以上的概念来操作数据。</p>
+<h2 id="创建流"><a href="#创建流" class="headerlink" title="创建流"></a>创建流</h2><p>stream指串行顺序流；parallelStream指并行流。</p>
+<p>对于并行流，只有当内存中的数据需要执行大量计算操作时才应该被使用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Sometimes the thing you&#x27;re searching for your whole life, it&#x27;s right there by your side all along.&quot;</span>;</span><br><span class="line"></span><br><span class="line">String[] strings = str.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; list = Arrays.asList(strings);</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;(list);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>创建一个空流</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; emptyStream = Stream.empty();</span><br></pre></td></tr></table></figure></li>
+<li><p>指定元素转换流</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//顺序流</span></span><br><span class="line"><span class="comment">//Stream.of(T...)方法实现调用Arrays.stream(T[])</span></span><br><span class="line">Stream&lt;String&gt; ofsStream = Stream.of(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//并行流</span></span><br><span class="line"><span class="comment">//parallel()将顺序流转换成并行流</span></span><br><span class="line">Stream&lt;String&gt; ofsParallelStream = Stream.of(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>).parallel();</span><br></pre></td></tr></table></figure></li>
+<li><p>将数组转换成流</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法一: String.of(T)</span></span><br><span class="line">Stream&lt;String&gt; ofStream = Stream.of(strings);</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法二: Arrays.stream(T[], int, int)</span></span><br><span class="line"><span class="comment">//Arrays.stream(T[])方法实现调用Arrays.stream(T, 0, t.length)</span></span><br><span class="line">Stream&lt;String&gt; arraysStream = Arrays.stream(strings);</span><br></pre></td></tr></table></figure></li>
+<li><p>将集合转换成流</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; listStream = list.stream();</span><br><span class="line"><span class="comment">//并行流</span></span><br><span class="line">Stream&lt;String&gt; listParallelStream = list.parallelStream();</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; setStream = set.stream();</span><br><span class="line"><span class="comment">//并行流</span></span><br><span class="line">Stream&lt;String&gt; setParallelStream = set.parallelStream();</span><br></pre></td></tr></table></figure></li>
+<li><p>将文件的行作为元素产生流</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; filesStream = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">	filesStream = Files.lines(Paths.get(<span class="string">&quot;./$files/&quot;</span>, <span class="string">&quot;The Road Not Taken.txt&quot;</span>), StandardCharsets.UTF_8);</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个无限流，元素值通过反复调用传入函数</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生一个随机数流</span></span><br><span class="line">Stream&lt;Double&gt; randoms = Stream.generate(Math::random);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个无限流，元素值通过传入种子数和函数，并通过反复将该函数应用到之前元素值产生</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生一个整数无限序列:0, 1, 2...</span></span><br><span class="line">Stream&lt;BigInteger&gt; integers = Stream.iterate(BigInteger.ZERO, n -&gt; n.add(BigInteger.ONE));</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，元素按照正则表达式分割一个CharSequence对象产生</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; stringStream = Pattern.compile(<span class="string">&quot; &quot;</span>).splitAsStream(str);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h2><p>指定将初始化流转换成为其他流的中间操作，可能包含多个步骤。</p>
+<p>流的转换操作不会修改其数据源，将是产生一个新流，它的元素派生自前一个流。</p>
+<ul>
+<li><p>产生一个流，其中包含当前流中满足条件的所有元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生包含arraysStream中元素长度大于5的filterStream</span></span><br><span class="line">Stream&lt;String&gt; filterStream = Arrays.stream(strings).filter(s -&gt; s.length() &gt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含将当前流中所有元素应用于传入函数产生的结果</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生包含arraysStream中元素首字母的mapStream</span></span><br><span class="line">Stream&lt;String&gt; mapStream = Arrays.stream(strings).map(s -&gt; s.substring(<span class="number">0</span>, <span class="number">1</span>));</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含当前流中最初n个元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生包含arraysStream中前8个元素的limitStream</span></span><br><span class="line">Stream&lt;String&gt; limitStream = Arrays.stream(strings).limit(<span class="number">8</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含当前流中除最初n个元素外的元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//产生包含arraysStream中除前8个元素外的其他元素的skipStream</span></span><br><span class="line">Stream&lt;String&gt; skipStream = Arrays.stream(strings).skip(<span class="number">8</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含当前流中剔除重复元素后的元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; distinctStream = Arrays.stream(strings).distinct();</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含当前流按照元素排序规则排序后的元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; sortStream = Arrays.stream(strings).sorted();</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传入排序规则</span></span><br><span class="line">Stream&lt;String&gt; sortByStream = Arrays.stream(strings).sorted((o1, o2) -&gt; &#123;</span><br><span class="line">	<span class="keyword">return</span> o1.length() - o2.length();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含由两个流的元素连接组成的元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;String&gt; concatStream = Stream.concat(limitStream, skipStream);</span><br></pre></td></tr></table></figure></li>
+<li><p>产生一个流，其中包含与当前流的元素相同的元素，但在每次获取一个元素时会调用传入方法</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打印元素</span></span><br><span class="line">Stream&lt;String&gt; peekStream = Arrays.stream(strings).peek(e -&gt; System.out.print(e + <span class="string">&quot; &quot;</span>));</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="终结流"><a href="#终结流" class="headerlink" title="终结流"></a>终结流</h2><p>终止操作，产生结果。</p>
+<ul>
+<li><p>获取流中元素的数量</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">n</span> <span class="operator">=</span> Arrays.stream(strings).count();</span><br></pre></td></tr></table></figure></li>
+<li><p>获取流中的最大值</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">maxString</span> <span class="operator">=</span> Arrays.stream(strings).max(String::compareToIgnoreCase).orElse(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取流中的最小值</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">minString</span> <span class="operator">=</span> Arrays.stream(strings).min(String::compareTo).orElse(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取流中第一个元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">first</span> <span class="operator">=</span> Arrays.stream(strings).findFirst().orElse(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>随机获取流中任意一个元素</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在串行的流中，findAny()和findFirst()返回的都是第一个元素</span></span><br><span class="line"><span class="comment">//而在并行的流中，findAny返回的是最快处理完的那个线程的元素</span></span><br><span class="line"><span class="type">String</span> <span class="variable">any</span> <span class="operator">=</span> Arrays.stream(strings).findAny().orElse(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>判断流中是否存在元素匹配</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断流中是否存在元素以&#x27;Y&#x27;开头</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">anyMatch</span> <span class="operator">=</span> Arrays.stream(strings).anyMatch(s -&gt; s.startsWith(<span class="string">&quot;Y&quot;</span>));</span><br></pre></td></tr></table></figure></li>
+<li><p>判断流中是否存在所有元素匹配</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断流中所有元素长度是否大于2</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">allMatch</span> <span class="operator">=</span> Arrays.stream(strings).allMatch(s -&gt; s.length() &gt; <span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>判断流中是否所有元素都不匹配</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">noneMatch</span> <span class="operator">=</span> Arrays.stream(strings).noneMatch(s -&gt; s.length() &gt; <span class="number">4</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取当前流的迭代器</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;String&gt; it = Arrays.stream(strings).iterator();</span><br></pre></td></tr></table></figure></li>
+<li><p>在流的每个元素上传入函数</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//打印每个元素</span></span><br><span class="line">Arrays.stream(strings).forEach(System.out::println);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="收集流"><a href="#收集流" class="headerlink" title="收集流"></a>收集流</h2><p>将流元素收集到其他数据结构中。</p>
+<ul>
+<li><p>收集到数组</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] arrays = Arrays.stream(strings).toArray(String[]::<span class="keyword">new</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>收集到集合</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; lists = Arrays.stream(strings).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;String&gt; sets = Arrays.stream(strings).collect(Collectors.toSet());</span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TreeSet&lt;String&gt; TreeSet = Arrays.stream(strings).collect(Collectors.toCollection(TreeSet::<span class="keyword">new</span>));</span><br></pre></td></tr></table></figure></li>
+<li><p>连接流中所有元素，收集到字符串</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">join</span> <span class="operator">=</span> Arrays.stream(strings).collect(Collectors.joining());</span><br><span class="line"></span><br><span class="line"><span class="comment">//传入连接符，分隔元素</span></span><br><span class="line"><span class="type">String</span> <span class="variable">joinBy</span> <span class="operator">=</span> Arrays.stream(strings).collect(Collectors.joining(<span class="string">&quot;-&quot;</span>));</span><br></pre></td></tr></table></figure></li>
+<li><p>收集到映射表</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//最后参数给定原值和新值发生冲突的解决方法</span></span><br><span class="line">Map&lt;Integer, String&gt; map = Arrays.stream(strings).collect(Collectors.toMap(k -&gt; k.length(), v -&gt; v, (existingValue, newValue) -&gt; newValue));</span><br></pre></td></tr></table></figure></li>
+<li><p>收集成SummaryStatistics对象</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//IntSummaryStatistics, LongSummaryStatistics, DoubleSummaryStatistics</span></span><br><span class="line"><span class="type">IntSummaryStatistics</span> <span class="variable">summaryStatistics</span> <span class="operator">=</span> Arrays.stream(strings).collect(Collectors.summarizingInt(String::length));</span><br><span class="line"><span class="comment">//产生汇总后的元素个数</span></span><br><span class="line"><span class="type">long</span> <span class="variable">count</span> <span class="operator">=</span> summaryStatistics.getCount();</span><br><span class="line"><span class="comment">//总和</span></span><br><span class="line"><span class="type">long</span> <span class="variable">sum</span> <span class="operator">=</span> summaryStatistics.getSum();</span><br><span class="line"><span class="comment">//最大值</span></span><br><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> summaryStatistics.getMax();</span><br><span class="line"><span class="comment">//最小值</span></span><br><span class="line"><span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> summaryStatistics.getMin();</span><br><span class="line"><span class="comment">//平均数</span></span><br><span class="line"><span class="type">double</span> <span class="variable">avg</span> <span class="operator">=</span> summaryStatistics.getAverage();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="基本类型数据流"><a href="#基本类型数据流" class="headerlink" title="基本类型数据流"></a>基本类型数据流</h2><p>流库中设置有专门的基本类型数据流来直接存储基本类型值，而无需使用包装器。</p>
+<p>short、char、byte、boolean ==&gt; IntStream<br>float、double ==&gt; DoubleStream<br>long ==&gt; LongStream</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">IntStream</span> <span class="variable">intStream1</span> <span class="operator">=</span> IntStream.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line"><span class="type">IntStream</span> <span class="variable">intStream2</span> <span class="operator">=</span> IntStream.generate(() -&gt; (<span class="type">int</span>) Math.random() * <span class="number">100</span>);</span><br><span class="line"><span class="comment">//产生给定范围整数元素，不包括10</span></span><br><span class="line"><span class="type">IntStream</span> <span class="variable">intStream3</span> <span class="operator">=</span> IntStream.range(<span class="number">0</span>, <span class="number">10</span>);</span><br><span class="line"><span class="comment">//产生给定范围整数元素，包括10</span></span><br><span class="line"><span class="type">IntStream</span> <span class="variable">intStream4</span> <span class="operator">=</span> IntStream.rangeClosed(<span class="number">0</span>, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//基本类型转对象流</span></span><br><span class="line">Stream&lt;Integer&gt; integerStream = intStream1.boxed();</span><br><span class="line"><span class="comment">//对象流转基本类型流</span></span><br><span class="line"><span class="type">IntStream</span> <span class="variable">intStream</span> <span class="operator">=</span> integerStream.mapToInt(Integer::intValue);</span><br><span class="line"><span class="comment">//转换成数组</span></span><br><span class="line"><span class="type">int</span>[] ints = intStream.toArray();</span><br><span class="line"><span class="comment">//转换成SummaryStatistics对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//求和</span></span><br><span class="line"><span class="type">int</span> <span class="variable">intSum</span> <span class="operator">=</span> intStream.sum();</span><br><span class="line"><span class="comment">//最大值</span></span><br><span class="line"><span class="type">int</span> <span class="variable">intMax</span> <span class="operator">=</span> intStream.max().orElse(Integer.MAX_VALUE);</span><br><span class="line"><span class="comment">//最小值</span></span><br><span class="line"><span class="type">int</span> <span class="variable">intMin</span> <span class="operator">=</span> intStream.min().orElse(Integer.MIN_VALUE);</span><br><span class="line"><span class="comment">//求平均数</span></span><br><span class="line"><span class="type">double</span> <span class="variable">intAvg</span> <span class="operator">=</span> intStream.average().orElse(Double.NaN);</span><br></pre></td></tr></table></figure>
+
+<p>适用IntStream的方法大多也适用于DoubleStream和LongStream。</p>
+<p>基本类型数据流也是流，适用对象流的方法大多也适用基本数据类型流。</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2022/07/22/TP-001-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Problems/HDU%20OJ/HDU%201000/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  HDU 1000
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/22/I-001-%E9%98%85%E8%AF%BB%E6%91%98%E6%8A%84/%E5%A4%A9%E5%B9%95%E7%BA%A2%E5%B0%98/">
+                天幕红尘
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">ccying</a> 
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
