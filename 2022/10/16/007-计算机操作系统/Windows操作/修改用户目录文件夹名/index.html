@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		修改用户目录文件夹名 | 
 	 
 	陈小盈|笔记本
 	</title>
@@ -225,7 +227,7 @@ var _hmt = _hmt || [];
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2022/10/16/007-%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows%E6%93%8D%E4%BD%9C/%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/">
                      
 										    修改用户目录文件夹名
@@ -315,88 +317,104 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
+		<h1 id="article-title">
+	修改用户目录文件夹名
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2022/07/22/005-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Problems/HDU/HDU%201001/">
-				<h2 class="index-title">
-					HDU 1001
-				</h2>
-				<div class="index-brief">
-					Sum Problem
-Time Limit: 1000/500 MS (Java/Others)
+	<span>陈小盈</span>
+	<span>2022-10-16</span>
+	<!-- <span>2022-10-16 10:52:06</span> -->
+		<!-- <div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/计算机技术/">计算机技术</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
-Memory Limit: 65536/32768 K (Java/Others)
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/计算机操作系统/">计算机操作系统</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/Windows操作/">Windows操作</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div> -->
 
-
-Problem Description
-Hey, welcome to HDOJ(Hangzhou Dianz
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-					<span>陈小盈</span>
-					<span>2022-07-22</span>
-				    <!-- <span>2022-07-22 00:00:00</span> -->
-                    <!-- 
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/计算机技术/">计算机技术</a>
-										
-                                    </span>
-                                
-                            
-                     -->
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2022/07/02/005-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Problems/HDU/HDU%201000/">
-				<h2 class="index-title">
-					HDU 1000
-				</h2>
-				<div class="index-brief">
-					A + B Problem
-Time Limit: 2000/1000 MS (Java/Others)
-
-Memory Limit: 65536/32768 K (Java/Others)
-
-
-Problem Description
-Calculate A + B.
- 
-
-Input
-Each l
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-					<span>陈小盈</span>
-					<span>2022-07-02</span>
-				    <!-- <span>2022-07-02 00:00:00</span> -->
-                    <!-- 
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/计算机技术/">计算机技术</a>
-										
-                                    </span>
-                                
-                            
-                     -->
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
 
+<div id="article-content">
+	<ol>
+<li><p>启动内置管理员账号。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net user administrator /active:yes</span><br></pre></td></tr></table></figure></li>
+<li><p>用户切换成administrator账号。重启。</p>
+</li>
+<li><p>修改用户目录文件夹名</p>
+</li>
+<li><p>打开’计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList’</p>
+<ul>
+<li>方式一打开注册表：WIN + R快捷键后，输入’regedit’。</li>
+<li>方式二打开注册表：直接搜索内置应用’注册表编辑器’。</li>
+</ul>
+</li>
+<li><p> 查看用户的SID。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whoami /user</span><br></pre></td></tr></table></figure></li>
+<li><p> 在ProfileList子目录下查找目录名为SID的目录，修改数值名称’ProfileImagePath’数值数据为要修改的用户文件夹路径。重启。</p>
+</li>
+<li><p>切换账户为用户账户。重启。关闭内置管理员账号。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net user administrator /active:no</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2022/11/02/014-%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/My%20Plugs/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  My Plugs
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2022/07/22/005-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Problems/HDU/HDU%201001/">
+                HDU 1001
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
